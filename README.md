@@ -1,45 +1,44 @@
-# Embedded Systems
+# Contents
 
-## Embedded C
+## Embedded Systems
+
+### Embedded C programming
 
 * [blink LED](Tiva%20C%20series) Texas Instrument Tiva C series microcontroller
 <!-- * [Calculator](PlatformIO/Projects/Calculator/) VScode extension PlatformIO -->
 
-### Datasheets
+#### Datasheets 
 
 * [TM4C123G_DOC](Datasheets/TM4C123G_DOC) Texas Instrument microcontroller
 
-&nbsp;
-
-## FPGA verilog VHDL
+### FPGA verilog VHDL programming
 
 * [verilog](VERILOG) Icarus Verilog
 
 &nbsp;
+
 &nbsp;
 
-<span style="font-size: 29px;"> Robotics </span>
----
+## Robotics
 
-<span style="font-size: 22px;"> ROS2 </span>
+### ROS2
 
 *
 
 &nbsp;
 
-<span style="font-size: 29px;"> Industrial Automation </span>
----
+## Industrial Automation
 
-<span style="font-size: 22px;"> PLC </span>
+### PLC 
 
-### Rockwell Automation (*ladder logic*)
+#### Rockwell Automation (*ladder logic*)
 
 * [dishwasher](PLC_project/dishwash/) RSLogix emulate500, RSLinx
 
-<span style="font-size: 22px;"> HMI </span>
+### HMI
 
 * TBD
 
-<span style="font-size: 22px;"> SCADA </span>
+### SCADA
 
 * WIP
