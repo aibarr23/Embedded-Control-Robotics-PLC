@@ -7,7 +7,7 @@
 * [blink LED](Tiva%20C%20series) Texas Instrument Tiva C series microcontroller
 <!-- * [Calculator](PlatformIO/Projects/Calculator/) VScode extension PlatformIO -->
 
-#### Datasheets 
+#### Datasheets
 
 * [TM4C123G_DOC](Datasheets/TM4C123G_DOC) Texas Instrument microcontroller
 
@@ -23,13 +23,13 @@
 
 ### ROS2
 
-* [small 2 wheel robot](Robotics) RViz and frames
+* [small 2 wheel robot](Robotics/ROS2/ROS_test/) RViz and frames
 
 &nbsp;
 
 ## Industrial Automation
 
-### PLC 
+### PLC
 
 #### Rockwell Automation (*ladder logic*)
 
