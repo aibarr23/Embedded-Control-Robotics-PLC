@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150616 20:48:30.471" generator="Robot 2.8.7 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\more readable - gherkin\tests\amazon-verbose.robot" id="s1" name="Amazon-Verbose">
+<test id="s1-t1" name="Logged out user can search for products">
+<kw type="setup" name="Common.Begin Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20150616 20:48:30.646" level="INFO">Opening browser 'ie' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20150616 20:48:31.863" starttime="20150616 20:48:30.646"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:31.863" starttime="20150616 20:48:30.645"></status>
+</kw>
+<kw type="kw" name="Amazon.Given user is not logged in">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check to see whether user is logged in</arg>
+</arguments>
+<msg timestamp="20150616 20:48:31.863" level="INFO">Check to see whether user is logged in</msg>
+<status status="PASS" endtime="20150616 20:48:31.863" starttime="20150616 20:48:31.863"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:31.863" starttime="20150616 20:48:31.863"></status>
+</kw>
+<kw type="kw" name="Amazon.When user searches for products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="LandingPage.Load">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+</arguments>
+<msg timestamp="20150616 20:48:31.863" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150616 20:48:35.037" starttime="20150616 20:48:31.863"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:35.037" starttime="20150616 20:48:31.863"></status>
+</kw>
+<kw type="kw" name="TopNav.Search for Products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="TopNav.Enter Search Term">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20150616 20:48:35.040" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20150616 20:48:36.667" starttime="20150616 20:48:35.039"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:36.667" starttime="20150616 20:48:35.039"></status>
+</kw>
+<kw type="kw" name="TopNav.Submit Search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20150616 20:48:36.667" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20150616 20:48:39.296" starttime="20150616 20:48:36.667"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:39.297" starttime="20150616 20:48:36.667"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:39.297" starttime="20150616 20:48:35.038"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:39.297" starttime="20150616 20:48:31.863"></status>
+</kw>
+<kw type="kw" name="Amazon.Then search results contains relevant products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SearchResults.Verify Search Completed">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>results for "Ferrari 458"</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:48:39.417" starttime="20150616 20:48:39.299"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:39.417" starttime="20150616 20:48:39.299"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:39.417" starttime="20150616 20:48:39.298"></status>
+</kw>
+<kw type="teardown" name="Common.End Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150616 20:48:41.443" starttime="20150616 20:48:39.418"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:41.443" starttime="20150616 20:48:39.418"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20150616 20:48:41.444" critical="yes" starttime="20150616 20:48:30.644"></status>
+</test>
+<test id="s1-t2" name="Logged out user can view a product">
+<kw type="setup" name="Common.Begin Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20150616 20:48:41.449" level="INFO">Opening browser 'ie' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20150616 20:48:42.667" starttime="20150616 20:48:41.449"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:42.668" starttime="20150616 20:48:41.448"></status>
+</kw>
+<kw type="kw" name="Amazon.Given user is not logged in">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check to see whether user is logged in</arg>
+</arguments>
+<msg timestamp="20150616 20:48:42.669" level="INFO">Check to see whether user is logged in</msg>
+<status status="PASS" endtime="20150616 20:48:42.669" starttime="20150616 20:48:42.669"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:42.670" starttime="20150616 20:48:42.668"></status>
+</kw>
+<kw type="kw" name="Amazon.And user searches for products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="LandingPage.Load">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+</arguments>
+<msg timestamp="20150616 20:48:42.671" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150616 20:48:47.212" starttime="20150616 20:48:42.671"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:47.212" starttime="20150616 20:48:42.671"></status>
+</kw>
+<kw type="kw" name="TopNav.Search for Products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="TopNav.Enter Search Term">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20150616 20:48:47.215" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20150616 20:48:47.697" starttime="20150616 20:48:47.212"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:47.698" starttime="20150616 20:48:47.212"></status>
+</kw>
+<kw type="kw" name="TopNav.Submit Search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20150616 20:48:47.699" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20150616 20:48:51.682" starttime="20150616 20:48:47.699"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:51.683" starttime="20150616 20:48:47.698"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:51.683" starttime="20150616 20:48:47.212"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:51.683" starttime="20150616 20:48:42.670"></status>
+</kw>
+<kw type="kw" name="Amazon.And search results contains relevant products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SearchResults.Verify Search Completed">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>results for "Ferrari 458"</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:48:54.043" starttime="20150616 20:48:51.685"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:54.043" starttime="20150616 20:48:51.685"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:54.043" starttime="20150616 20:48:51.684"></status>
+</kw>
+<kw type="kw" name="Amazon.And user selects a product from search results">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SearchResults.Click Product Link">
+<doc>Clicks on the first product in the search results list</doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=#result_0 a.s-access-detail-page</arg>
+</arguments>
+<msg timestamp="20150616 20:48:54.043" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
+<status status="PASS" endtime="20150616 20:48:57.607" starttime="20150616 20:48:54.043"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:57.607" starttime="20150616 20:48:54.043"></status>
+</kw>
+<kw type="kw" name="Product.Verify Page Loaded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:48:57.757" starttime="20150616 20:48:57.607"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:57.758" starttime="20150616 20:48:57.607"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:57.758" starttime="20150616 20:48:54.043"></status>
+</kw>
+<kw type="kw" name="Amazon.Then correct product page loads">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Product.Verify Page Loaded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:48:57.841" starttime="20150616 20:48:57.760"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:57.842" starttime="20150616 20:48:57.759"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:57.842" starttime="20150616 20:48:57.758"></status>
+</kw>
+<kw type="teardown" name="Common.End Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150616 20:48:59.875" starttime="20150616 20:48:57.843"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:48:59.875" starttime="20150616 20:48:57.842"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20150616 20:48:59.875" critical="yes" starttime="20150616 20:48:41.447"></status>
+</test>
+<test id="s1-t3" name="Logged out user can add product to cart">
+<kw type="setup" name="Common.Begin Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20150616 20:48:59.875" level="INFO">Opening browser 'ie' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20150616 20:49:01.076" starttime="20150616 20:48:59.875"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:01.077" starttime="20150616 20:48:59.875"></status>
+</kw>
+<kw type="kw" name="Amazon.Given user is not logged in">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check to see whether user is logged in</arg>
+</arguments>
+<msg timestamp="20150616 20:49:01.078" level="INFO">Check to see whether user is logged in</msg>
+<status status="PASS" endtime="20150616 20:49:01.078" starttime="20150616 20:49:01.078"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:01.078" starttime="20150616 20:49:01.077"></status>
+</kw>
+<kw type="kw" name="Amazon.And user searches for products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="LandingPage.Load">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+</arguments>
+<msg timestamp="20150616 20:49:01.081" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150616 20:49:04.282" starttime="20150616 20:49:01.080"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:04.283" starttime="20150616 20:49:01.080"></status>
+</kw>
+<kw type="kw" name="TopNav.Search for Products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="TopNav.Enter Search Term">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20150616 20:49:04.284" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20150616 20:49:05.905" starttime="20150616 20:49:04.284"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:05.906" starttime="20150616 20:49:04.283"></status>
+</kw>
+<kw type="kw" name="TopNav.Submit Search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20150616 20:49:05.907" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20150616 20:49:11.303" starttime="20150616 20:49:05.906"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:11.303" starttime="20150616 20:49:05.906"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:11.303" starttime="20150616 20:49:04.283"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:11.303" starttime="20150616 20:49:01.079"></status>
+</kw>
+<kw type="kw" name="Amazon.And search results contains relevant products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SearchResults.Verify Search Completed">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>results for "Ferrari 458"</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:11.409" starttime="20150616 20:49:11.303"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:11.409" starttime="20150616 20:49:11.303"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:11.409" starttime="20150616 20:49:11.303"></status>
+</kw>
+<kw type="kw" name="Amazon.And user selects a product from search results">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SearchResults.Click Product Link">
+<doc>Clicks on the first product in the search results list</doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=#result_0 a.s-access-detail-page</arg>
+</arguments>
+<msg timestamp="20150616 20:49:11.411" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
+<status status="PASS" endtime="20150616 20:49:15.101" starttime="20150616 20:49:11.411"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:15.101" starttime="20150616 20:49:11.410"></status>
+</kw>
+<kw type="kw" name="Product.Verify Page Loaded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:15.215" starttime="20150616 20:49:15.102"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:15.215" starttime="20150616 20:49:15.101"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:15.215" starttime="20150616 20:49:11.410"></status>
+</kw>
+<kw type="kw" name="Amazon.And correct product page loads">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Product.Verify Page Loaded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:15.306" starttime="20150616 20:49:15.215"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:15.306" starttime="20150616 20:49:15.215"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:15.306" starttime="20150616 20:49:15.215"></status>
+</kw>
+<kw type="kw" name="Amazon.When user adds that product to their cart">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Product.Add to Cart">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20150616 20:49:15.310" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" endtime="20150616 20:49:19.999" starttime="20150616 20:49:15.309"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:19.999" starttime="20150616 20:49:15.308"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:19.999" starttime="20150616 20:49:15.307"></status>
+</kw>
+<kw type="kw" name="Amazon.Then the product is present in cart">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Cart.Verify Product Added">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:20.099" starttime="20150616 20:49:20.001"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:20.100" starttime="20150616 20:49:20.001"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:20.100" starttime="20150616 20:49:20.000"></status>
+</kw>
+<kw type="teardown" name="Common.End Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:22.184" starttime="20150616 20:49:20.101"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:22.184" starttime="20150616 20:49:20.100"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20150616 20:49:22.184" critical="yes" starttime="20150616 20:48:59.875"></status>
+</test>
+<test id="s1-t4" name="Logged out user must sign in to check out">
+<kw type="setup" name="Common.Begin Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20150616 20:49:22.184" level="INFO">Opening browser 'ie' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20150616 20:49:23.416" starttime="20150616 20:49:22.184"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:23.417" starttime="20150616 20:49:22.184"></status>
+</kw>
+<kw type="kw" name="Amazon.Given user is not logged in">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Check to see whether user is logged in</arg>
+</arguments>
+<msg timestamp="20150616 20:49:23.418" level="INFO">Check to see whether user is logged in</msg>
+<status status="PASS" endtime="20150616 20:49:23.418" starttime="20150616 20:49:23.418"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:23.419" starttime="20150616 20:49:23.417"></status>
+</kw>
+<kw type="kw" name="Amazon.And user searches for products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="LandingPage.Load">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+</arguments>
+<msg timestamp="20150616 20:49:23.420" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150616 20:49:26.660" starttime="20150616 20:49:23.420"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:26.660" starttime="20150616 20:49:23.420"></status>
+</kw>
+<kw type="kw" name="TopNav.Search for Products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="TopNav.Enter Search Term">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20150616 20:49:26.662" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20150616 20:49:28.311" starttime="20150616 20:49:26.660"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:28.312" starttime="20150616 20:49:26.660"></status>
+</kw>
+<kw type="kw" name="TopNav.Submit Search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20150616 20:49:28.313" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20150616 20:49:31.886" starttime="20150616 20:49:28.313"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:31.887" starttime="20150616 20:49:28.312"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:31.887" starttime="20150616 20:49:26.660"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:31.887" starttime="20150616 20:49:23.419"></status>
+</kw>
+<kw type="kw" name="Amazon.And search results contains relevant products">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SearchResults.Verify Search Completed">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>results for "Ferrari 458"</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:32.000" starttime="20150616 20:49:31.889"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:32.001" starttime="20150616 20:49:31.889"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:32.001" starttime="20150616 20:49:31.888"></status>
+</kw>
+<kw type="kw" name="Amazon.And user selects a product from search results">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SearchResults.Click Product Link">
+<doc>Clicks on the first product in the search results list</doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=#result_0 a.s-access-detail-page</arg>
+</arguments>
+<msg timestamp="20150616 20:49:32.003" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
+<status status="PASS" endtime="20150616 20:49:35.868" starttime="20150616 20:49:32.002"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:35.869" starttime="20150616 20:49:32.002"></status>
+</kw>
+<kw type="kw" name="Product.Verify Page Loaded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:35.981" starttime="20150616 20:49:35.870"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:35.982" starttime="20150616 20:49:35.869"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:35.982" starttime="20150616 20:49:32.001"></status>
+</kw>
+<kw type="kw" name="Amazon.And correct product page loads">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Product.Verify Page Loaded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:36.074" starttime="20150616 20:49:35.984"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:36.075" starttime="20150616 20:49:35.983"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:36.075" starttime="20150616 20:49:35.982"></status>
+</kw>
+<kw type="kw" name="Amazon.And user adds that product to their cart">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Product.Add to Cart">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20150616 20:49:36.077" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" endtime="20150616 20:49:40.911" starttime="20150616 20:49:36.077"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:40.911" starttime="20150616 20:49:36.076"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:40.911" starttime="20150616 20:49:36.076"></status>
+</kw>
+<kw type="kw" name="Amazon.And the product is present in cart">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Cart.Verify Product Added">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:41.013" starttime="20150616 20:49:40.913"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:41.014" starttime="20150616 20:49:40.913"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:41.014" starttime="20150616 20:49:40.912"></status>
+</kw>
+<kw type="kw" name="Amazon.When user attempts to checkout">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Cart.Proceed to Checkout">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>id=hlb-ptc-btn-native</arg>
+</arguments>
+<msg timestamp="20150616 20:49:41.016" level="INFO">Clicking link 'id=hlb-ptc-btn-native'.</msg>
+<status status="PASS" endtime="20150616 20:49:42.606" starttime="20150616 20:49:41.016"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:42.607" starttime="20150616 20:49:41.015"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:42.607" starttime="20150616 20:49:41.015"></status>
+</kw>
+<kw type="kw" name="Amazon.Then the user is required to sign in">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="SignIn.Verify Page Loaded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>ap_signin1a_pagelet_title</arg>
+</arguments>
+<msg timestamp="20150616 20:49:42.660" level="INFO">Current page contains element 'ap_signin1a_pagelet_title'.</msg>
+<status status="PASS" endtime="20150616 20:49:42.661" starttime="20150616 20:49:42.610"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Element Text Should Be">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>ap_signin1a_pagelet_title</arg>
+<arg>Sign In</arg>
+</arguments>
+<msg timestamp="20150616 20:49:42.661" level="INFO">Verifying element 'ap_signin1a_pagelet_title' contains exactly text 'Sign In'.</msg>
+<status status="PASS" endtime="20150616 20:49:42.754" starttime="20150616 20:49:42.661"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:42.755" starttime="20150616 20:49:42.609"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:42.755" starttime="20150616 20:49:42.608"></status>
+</kw>
+<kw type="teardown" name="Common.End Web Test">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150616 20:49:44.778" starttime="20150616 20:49:42.757"></status>
+</kw>
+<status status="PASS" endtime="20150616 20:49:44.778" starttime="20150616 20:49:42.756"></status>
+</kw>
+<doc>This approach uses first level keywords, and it's clear what's happening under the covers</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20150616 20:49:44.778" critical="yes" starttime="20150616 20:49:22.184"></status>
+</test>
+<doc>These test cases are comprised of 1st level keywords</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150616 20:49:44.778" starttime="20150616 20:48:30.471"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="4" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" pass="4" id="s1" name="Amazon-Verbose">Amazon-Verbose</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

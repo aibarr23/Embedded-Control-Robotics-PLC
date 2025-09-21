@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180927 21:11:27.350">
+<suite id="s1" name="Demo" source="D:\Documents\Training Courses\Level 1\06 Create a More Readable Script\04 intro to keywords\keyword-demo\demo.robot">
+<test id="s1-t1" name="Test case 1">
+<kw name="Do Something">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am doing something...</arg>
+</arguments>
+<msg timestamp="20180927 21:11:27.372" level="INFO">I am doing something...</msg>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<kw name="Do Something Else">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am doing something else...</arg>
+</arguments>
+<msg timestamp="20180927 21:11:27.372" level="INFO">I am doing something else...</msg>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Test case 2">
+<kw name="Do Another Thing">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am doing another thing...</arg>
+</arguments>
+<msg timestamp="20180927 21:11:27.372" level="INFO">I am doing another thing...</msg>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<kw name="Do Something Else">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am doing something else...</arg>
+</arguments>
+<msg timestamp="20180927 21:11:27.372" level="INFO">I am doing something else...</msg>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372"></status>
+</kw>
+<status status="PASS" starttime="20180927 21:11:27.372" endtime="20180927 21:11:27.372" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180927 21:11:27.354" endtime="20180927 21:11:27.372"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Demo">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

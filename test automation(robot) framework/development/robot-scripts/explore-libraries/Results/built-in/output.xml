@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150715 22:17:16.817" generator="Robot 2.8.7 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\explore-libraries\tests\Built_in.robot" id="s1" name="Built in">
+<test id="s1-t1" name="Declare and set variables">
+<kw type="kw" name="${some_test_data} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>This is only available within this test</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.969" level="INFO">${some_test_data} = This is only available within this test</msg>
+<status status="PASS" endtime="20150715 22:17:16.969" starttime="20150715 22:17:16.969"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Test Variable">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${more_test_data}</arg>
+<arg>This is also only available within this test</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.972" level="INFO">${more_test_data} = This is also only available within this test</msg>
+<status status="PASS" endtime="20150715 22:17:16.972" starttime="20150715 22:17:16.970"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${some_suite_data}</arg>
+<arg>This is available within all tests in this suite</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.974" level="INFO">${some_suite_data} = This is available within all tests in this suite</msg>
+<status status="PASS" endtime="20150715 22:17:16.974" starttime="20150715 22:17:16.972"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${SOME_GLOBAL_DATA}</arg>
+<arg>This available everywhere</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.975" level="INFO">${SOME_GLOBAL_DATA} = This available everywhere</msg>
+<status status="PASS" endtime="20150715 22:17:16.975" starttime="20150715 22:17:16.974"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150715 22:17:16.975" critical="yes" starttime="20150715 22:17:16.967"></status>
+</test>
+<test id="s1-t2" name="Logging stuff">
+<kw type="kw" name="BuiltIn.Comment">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${unset_variable}</arg>
+</arguments>
+<status status="PASS" endtime="20150715 22:17:16.977" starttime="20150715 22:17:16.977"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Comment">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Just a random comment</arg>
+</arguments>
+<status status="PASS" endtime="20150715 22:17:16.978" starttime="20150715 22:17:16.978"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Comment">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${GLOBAL1}</arg>
+</arguments>
+<status status="PASS" endtime="20150715 22:17:16.978" starttime="20150715 22:17:16.978"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I have something to say</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.979" level="INFO">I have something to say</msg>
+<status status="PASS" endtime="20150715 22:17:16.979" starttime="20150715 22:17:16.979"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log Many">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>Something to say 1</arg>
+<arg>Something to say 2</arg>
+<arg>Something to say 3</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.980" level="INFO">Something to say 1</msg>
+<msg timestamp="20150715 22:17:16.980" level="INFO">Something to say 2</msg>
+<msg timestamp="20150715 22:17:16.980" level="INFO">Something to say 3</msg>
+<status status="PASS" endtime="20150715 22:17:16.980" starttime="20150715 22:17:16.979"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This can only be seen in the console, not the log!</arg>
+</arguments>
+<status status="PASS" endtime="20150715 22:17:16.981" starttime="20150715 22:17:16.980"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log Variables">
+<doc>Logs all variables in the current scope with given log level.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${/} = \</msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${:} = ;</msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${\n} = 
+</msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${DEBUG_FILE} = NONE</msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${EMPTY} = </msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${EXECDIR} = C:\development\robot-scripts\explore-libraries</msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${False} = False</msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${GLOBAL1} = I am global variable 1</msg>
+<msg timestamp="20150715 22:17:16.982" level="INFO">${LOG_FILE} = C:\development\robot-scripts\explore-libraries\results\built-in\log.html</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${LOG_LEVEL} = INFO</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${None} = None</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${null} = None</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${OUTPUT_DIR} = C:\development\robot-scripts\explore-libraries\results\built-in</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${OUTPUT_FILE} = C:\development\robot-scripts\explore-libraries\results\built-in\output.xml</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${PREV_TEST_MESSAGE} = </msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${PREV_TEST_NAME} = Declare and set variables</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${PREV_TEST_STATUS} = PASS</msg>
+<msg timestamp="20150715 22:17:16.983" level="INFO">${REPORT_FILE} = C:\development\robot-scripts\explore-libraries\results\built-in\report.html</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${SOME_GLOBAL_DATA} = This available everywhere</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${some_suite_data} = This is available within all tests in this suite</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${SPACE} =  </msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${SUITE_DOCUMENTATION} = Checking out the built-in library</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${SUITE_METADATA} = {}</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${SUITE_NAME} = Built in</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${SUITE_SOURCE} = C:\development\robot-scripts\explore-libraries\tests\Built_in.robot</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${TEMPDIR} = c:\users\bryanl~1\appdata\local\temp</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${TEST_DOCUMENTATION} = </msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${TEST_NAME} = Logging stuff</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">${True} = True</msg>
+<msg timestamp="20150715 22:17:16.984" level="INFO">@{EMPTY} = [ ]</msg>
+<msg timestamp="20150715 22:17:16.985" level="INFO">@{TEST_TAGS} = [ BuiltIn ]</msg>
+<status status="PASS" endtime="20150715 22:17:16.985" starttime="20150715 22:17:16.981"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${some_suite_data}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.985" level="INFO">This is available within all tests in this suite</msg>
+<status status="PASS" endtime="20150715 22:17:16.985" starttime="20150715 22:17:16.985"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${GLOBAL1}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.986" level="INFO">I am global variable 1</msg>
+<status status="PASS" endtime="20150715 22:17:16.986" starttime="20150715 22:17:16.986"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${SOME_GLOBAL_DATA}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.987" level="INFO">This available everywhere</msg>
+<status status="PASS" endtime="20150715 22:17:16.987" starttime="20150715 22:17:16.986"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>BuiltIn</tag>
+</tags>
+<status status="PASS" endtime="20150715 22:17:16.987" critical="yes" starttime="20150715 22:17:16.976"></status>
+</test>
+<test id="s1-t3" name="Ignore failures in this test">
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20150715 22:17:16.989" level="INFO">Opening browser 'ie' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150715 22:17:19.801" starttime="20150715 22:17:16.989"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Wait Until Page Contains</arg>
+<arg>This text doesn't exist</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>This text doesn't exist</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150715 22:17:25.678" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150715 22:17:25.678" starttime="20150715 22:17:25.283"></status>
+</kw>
+<msg timestamp="20150715 22:17:25.679" level="FAIL">Text 'This text doesn't exist' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20150715 22:17:25.679" starttime="20150715 22:17:19.803"></status>
+</kw>
+<status status="FAIL" endtime="20150715 22:17:25.680" starttime="20150715 22:17:19.802"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Wait Until Page Contains</arg>
+<arg>More text that doesn't exist</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>More text that doesn't exist</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150715 22:17:31.410" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150715 22:17:31.410" starttime="20150715 22:17:31.114"></status>
+</kw>
+<msg timestamp="20150715 22:17:31.411" level="FAIL">Text 'More text that doesn't exist' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20150715 22:17:31.411" starttime="20150715 22:17:25.681"></status>
+</kw>
+<status status="FAIL" endtime="20150715 22:17:31.411" starttime="20150715 22:17:25.681"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${some_suite_data}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:31.413" level="INFO">This is available within all tests in this suite</msg>
+<status status="PASS" endtime="20150715 22:17:31.413" starttime="20150715 22:17:31.412"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${GLOBAL1}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:31.414" level="INFO">I am global variable 1</msg>
+<status status="PASS" endtime="20150715 22:17:31.414" starttime="20150715 22:17:31.413"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${SOME_GLOBAL_DATA}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:31.415" level="INFO">This available everywhere</msg>
+<status status="PASS" endtime="20150715 22:17:31.415" starttime="20150715 22:17:31.415"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150715 22:17:33.429" starttime="20150715 22:17:31.416"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>BuiltIn</tag>
+</tags>
+<status status="FAIL" endtime="20150715 22:17:33.430" critical="yes" starttime="20150715 22:17:16.988">Several failures occurred:
+
+1) Text 'This text doesn't exist' did not appear in 5 seconds
+
+2) Text 'More text that doesn't exist' did not appear in 5 seconds</status>
+</test>
+<test id="s1-t4" name="Repeat things">
+<kw type="kw" name="BuiltIn.Repeat Keyword">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>3 Times</arg>
+<arg>Say Something Funny</arg>
+</arguments>
+<msg timestamp="20150715 22:17:33.436" level="INFO">Repeating keyword, round 1/3.</msg>
+<kw type="kw" name="Say something funny">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>These pretzels are making me thirsty...</arg>
+</arguments>
+<msg timestamp="20150715 22:17:33.437" level="INFO">These pretzels are making me thirsty...</msg>
+<status status="PASS" endtime="20150715 22:17:33.437" starttime="20150715 22:17:33.437"></status>
+</kw>
+<status status="PASS" endtime="20150715 22:17:33.437" starttime="20150715 22:17:33.436"></status>
+</kw>
+<msg timestamp="20150715 22:17:33.437" level="INFO">Repeating keyword, round 2/3.</msg>
+<kw type="kw" name="Say something funny">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>These pretzels are making me thirsty...</arg>
+</arguments>
+<msg timestamp="20150715 22:17:33.438" level="INFO">These pretzels are making me thirsty...</msg>
+<status status="PASS" endtime="20150715 22:17:33.438" starttime="20150715 22:17:33.438"></status>
+</kw>
+<status status="PASS" endtime="20150715 22:17:33.438" starttime="20150715 22:17:33.437"></status>
+</kw>
+<msg timestamp="20150715 22:17:33.438" level="INFO">Repeating keyword, round 3/3.</msg>
+<kw type="kw" name="Say something funny">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>These pretzels are making me thirsty...</arg>
+</arguments>
+<msg timestamp="20150715 22:17:33.439" level="INFO">These pretzels are making me thirsty...</msg>
+<status status="PASS" endtime="20150715 22:17:33.439" starttime="20150715 22:17:33.439"></status>
+</kw>
+<status status="PASS" endtime="20150715 22:17:33.439" starttime="20150715 22:17:33.438"></status>
+</kw>
+<status status="PASS" endtime="20150715 22:17:33.439" starttime="20150715 22:17:33.436"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${some_suite_data}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:33.440" level="INFO">This is available within all tests in this suite</msg>
+<status status="PASS" endtime="20150715 22:17:33.440" starttime="20150715 22:17:33.440"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${GLOBAL1}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:33.441" level="INFO">I am global variable 1</msg>
+<status status="PASS" endtime="20150715 22:17:33.441" starttime="20150715 22:17:33.441"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${SOME_GLOBAL_DATA}</arg>
+</arguments>
+<msg timestamp="20150715 22:17:33.442" level="INFO">This available everywhere</msg>
+<status status="PASS" endtime="20150715 22:17:33.442" starttime="20150715 22:17:33.442"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150715 22:17:33.443" critical="yes" starttime="20150715 22:17:33.433"></status>
+</test>
+<doc>Checking out the built-in library</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20150715 22:17:33.444" starttime="20150715 22:17:16.817"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="3">Critical Tests</stat>
+<stat fail="1" pass="3">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="1" fail="1">BuiltIn</stat>
+</tag>
+<suite>
+<stat fail="1" pass="3" id="s1" name="Built in">Built in</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

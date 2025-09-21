@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150711 19:13:59.906" generator="Robot 2.8.7 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\intro\tests\MySql_Tests.robot" id="s1" name="MySql Tests">
+<test id="s1-t1" name="Insert a Record">
+<kw type="setup" name="MySql.Connect">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="DatabaseLibrary.Connect To Database Using Custom Params">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>database='rftutorial', user='rftutorial', password='Demoscript1!', host='mysql1100.shared-servers.com', port=1091</arg>
+</arguments>
+<status status="PASS" endtime="20150711 19:14:00.224" starttime="20150711 19:13:59.984"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:00.224" starttime="20150711 19:13:59.983"></status>
+</kw>
+<kw type="kw" name="MySql.Save Current Row Count">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${current_row_count} = DatabaseLibrary.Row Count">
+<doc>Uses the input `selectStatement` to query the database and returns</doc>
+<arguments>
+<arg>SELECT * FROM DemoItems;</arg>
+</arguments>
+<msg timestamp="20150711 19:14:00.644" level="INFO">${current_row_count} = 1</msg>
+<status status="PASS" endtime="20150711 19:14:00.644" starttime="20150711 19:14:00.224"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PREVIOUS_ROW_COUNT}</arg>
+<arg>${current_row_count}</arg>
+</arguments>
+<msg timestamp="20150711 19:14:00.644" level="INFO">${PREVIOUS_ROW_COUNT} = 1</msg>
+<status status="PASS" endtime="20150711 19:14:00.644" starttime="20150711 19:14:00.644"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${current_row_count}</arg>
+</arguments>
+<msg timestamp="20150711 19:14:00.644" level="INFO">1</msg>
+<status status="PASS" endtime="20150711 19:14:00.644" starttime="20150711 19:14:00.644"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:00.644" starttime="20150711 19:14:00.224"></status>
+</kw>
+<kw type="kw" name="MySql.Get Input Data">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${name} = Dialogs.Get Value From User">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>Enter a First Name</arg>
+</arguments>
+<msg timestamp="20150711 19:14:04.757" level="INFO">${name} = Zack</msg>
+<status status="PASS" endtime="20150711 19:14:04.756" starttime="20150711 19:14:00.644"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${FIRST_NAME}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150711 19:14:04.758" level="INFO">${FIRST_NAME} = Zack</msg>
+<status status="PASS" endtime="20150711 19:14:04.759" starttime="20150711 19:14:04.757"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:04.759" starttime="20150711 19:14:00.644"></status>
+</kw>
+<kw type="kw" name="MySql.Insert Record">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${current_date} = DateTime.Get Current Date">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150711 19:14:04.769" level="INFO">${current_date} = 2015-07-11 19:14:04.769</msg>
+<status status="PASS" endtime="20150711 19:14:04.769" starttime="20150711 19:14:04.769"></status>
+</kw>
+<kw type="kw" name="${insert_command} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>INSERT INTO DemoItems (ItemName, FirstName) VALUES ('New Item ${current_date}', '${FIRST_NAME}')</arg>
+</arguments>
+<msg timestamp="20150711 19:14:04.770" level="INFO">${insert_command} = INSERT INTO DemoItems (ItemName, FirstName) VALUES ('New Item 2015-07-11 19:14:04.769', 'Zack')</msg>
+<status status="PASS" endtime="20150711 19:14:04.770" starttime="20150711 19:14:04.769"></status>
+</kw>
+<kw type="kw" name="DatabaseLibrary.Execute Sql String">
+<doc>Executes the sqlString as SQL commands.</doc>
+<arguments>
+<arg>${insert_command}</arg>
+</arguments>
+<status status="PASS" endtime="20150711 19:14:04.937" starttime="20150711 19:14:04.770"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:04.937" starttime="20150711 19:14:04.768"></status>
+</kw>
+<kw type="kw" name="MySql.Verify New Record Added">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${new_row_count} = DatabaseLibrary.Row Count">
+<doc>Uses the input `selectStatement` to query the database and returns</doc>
+<arguments>
+<arg>SELECT * FROM DemoItems;</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.037" level="INFO">${new_row_count} = 2</msg>
+<status status="PASS" endtime="20150711 19:14:05.037" starttime="20150711 19:14:04.937"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${new_row_count}</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.037" level="INFO">2</msg>
+<status status="PASS" endtime="20150711 19:14:05.037" starttime="20150711 19:14:05.037"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal As Numbers">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${new_row_count}</arg>
+<arg>${PREVIOUS_ROW_COUNT + 1 }</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.037" level="INFO">Argument types are:
+&lt;type 'int'&gt;
+&lt;type 'int'&gt;</msg>
+<status status="PASS" endtime="20150711 19:14:05.037" starttime="20150711 19:14:05.037"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.037" starttime="20150711 19:14:04.937"></status>
+</kw>
+<kw type="teardown" name="MySql.Disconnect">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="DatabaseLibrary.Disconnect From Database">
+<doc>Disconnects from the database.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150711 19:14:05.037" starttime="20150711 19:14:05.037"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.037" starttime="20150711 19:14:05.037"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>MySqlDB</tag>
+</tags>
+<status status="PASS" endtime="20150711 19:14:05.037" critical="yes" starttime="20150711 19:13:59.983"></status>
+</test>
+<test id="s1-t2" name="Verify Insert Contains Correct Input Data">
+<kw type="setup" name="MySql.Connect">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="DatabaseLibrary.Connect To Database Using Custom Params">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>database='rftutorial', user='rftutorial', password='Demoscript1!', host='mysql1100.shared-servers.com', port=1091</arg>
+</arguments>
+<status status="PASS" endtime="20150711 19:14:05.267" starttime="20150711 19:14:05.047"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.267" starttime="20150711 19:14:05.037"></status>
+</kw>
+<kw type="kw" name="MySql.Verify Last Record">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${queryResults} = DatabaseLibrary.Query">
+<doc>Uses the input `selectStatement` to query for the values that</doc>
+<arguments>
+<arg>SELECT * FROM DemoItems ORDER BY ItemId DESC LIMIT 1</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.387" level="INFO">${queryResults} = ((2, 'New Item 2015-07-11 19:14:04.769', 'Zack'),)</msg>
+<status status="PASS" endtime="20150711 19:14:05.387" starttime="20150711 19:14:05.267"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal As Strings">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${queryResults[0][2]}</arg>
+<arg>${FIRST_NAME}</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.387" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20150711 19:14:05.387" starttime="20150711 19:14:05.387"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${queryResults[0][2]}</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.387" level="INFO">Zack</msg>
+<status status="PASS" endtime="20150711 19:14:05.387" starttime="20150711 19:14:05.387"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.387" starttime="20150711 19:14:05.267"></status>
+</kw>
+<kw type="teardown" name="MySql.Disconnect">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="DatabaseLibrary.Disconnect From Database">
+<doc>Disconnects from the database.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150711 19:14:05.387" starttime="20150711 19:14:05.387"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.387" starttime="20150711 19:14:05.387"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>MySqlDB</tag>
+</tags>
+<status status="PASS" endtime="20150711 19:14:05.387" critical="yes" starttime="20150711 19:14:05.037"></status>
+</test>
+<test id="s1-t3" name="Log All Rows">
+<kw type="setup" name="MySql.Connect">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="DatabaseLibrary.Connect To Database Using Custom Params">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to</doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>database='rftutorial', user='rftutorial', password='Demoscript1!', host='mysql1100.shared-servers.com', port=1091</arg>
+</arguments>
+<status status="PASS" endtime="20150711 19:14:05.587" starttime="20150711 19:14:05.397"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.587" starttime="20150711 19:14:05.387"></status>
+</kw>
+<kw type="kw" name="MySql.Log All Rows">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${queryResults} = DatabaseLibrary.Query">
+<doc>Uses the input `selectStatement` to query for the values that</doc>
+<arguments>
+<arg>SELECT * FROM DemoItems ORDER BY ItemId</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.687" level="INFO">${queryResults} = ((1, 'New Item 2015-07-11 18:59:34.402', ''), (2, 'New Item 2015-07-11 19:14:04.769', 'Zack'))</msg>
+<status status="PASS" endtime="20150711 19:14:05.687" starttime="20150711 19:14:05.587"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log Many">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${queryResults}</arg>
+</arguments>
+<msg timestamp="20150711 19:14:05.687" level="INFO">((1, 'New Item 2015-07-11 18:59:34.402', ''), (2, 'New Item 2015-07-11 19:14:04.769', 'Zack'))</msg>
+<status status="PASS" endtime="20150711 19:14:05.687" starttime="20150711 19:14:05.687"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.687" starttime="20150711 19:14:05.587"></status>
+</kw>
+<kw type="teardown" name="MySql.Disconnect">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="DatabaseLibrary.Disconnect From Database">
+<doc>Disconnects from the database.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150711 19:14:05.687" starttime="20150711 19:14:05.687"></status>
+</kw>
+<status status="PASS" endtime="20150711 19:14:05.697" starttime="20150711 19:14:05.687"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>MySqlDB</tag>
+</tags>
+<status status="PASS" endtime="20150711 19:14:05.697" critical="yes" starttime="20150711 19:14:05.387"></status>
+</test>
+<doc>These are some MySql Database tests</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150711 19:14:05.697" starttime="20150711 19:13:59.906"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="3" fail="0">MySqlDB</stat>
+</tag>
+<suite>
+<stat fail="0" pass="3" id="s1" name="MySql Tests">MySql Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

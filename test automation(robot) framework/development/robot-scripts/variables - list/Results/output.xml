@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150618 21:55:38.388" generator="Robot 2.8.7 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\variables - list\tests" id="s1" name="Tests">
+<suite source="C:\development\robot-scripts\variables - list\tests\list.robot" id="s1-s1" name="List">
+<test id="s1-s1-t1" name="Variable demonstration">
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>@{MY_VARIABLE}[0]</arg>
+</arguments>
+<msg timestamp="20150618 21:55:38.427" level="INFO">Hello there</msg>
+<status status="PASS" endtime="20150618 21:55:38.427" starttime="20150618 21:55:38.427"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>@{MY_VARIABLE}[1]</arg>
+</arguments>
+<msg timestamp="20150618 21:55:38.428" level="INFO">This is value 2</msg>
+<status status="PASS" endtime="20150618 21:55:38.428" starttime="20150618 21:55:38.427"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>@{MY_VARIABLE}[2]</arg>
+</arguments>
+<msg timestamp="20150618 21:55:38.428" level="INFO">I am item 3</msg>
+<status status="PASS" endtime="20150618 21:55:38.428" starttime="20150618 21:55:38.428"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150618 21:55:38.429" critical="yes" starttime="20150618 21:55:38.426"></status>
+</test>
+<test id="s1-s1-t2" name="Variable demonstration 2">
+<kw type="kw" name="@{my_list_variable} = BuiltIn.Create List">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Item 1</arg>
+<arg>Item 2</arg>
+<arg>Item 3</arg>
+</arguments>
+<msg timestamp="20150618 21:55:38.431" level="INFO">@{my_list_variable} = [ Item 1 | Item 2 | Item 3 ]</msg>
+<status status="PASS" endtime="20150618 21:55:38.431" starttime="20150618 21:55:38.430"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>@{my_list_variable}[0]</arg>
+</arguments>
+<msg timestamp="20150618 21:55:38.431" level="INFO">Item 1</msg>
+<status status="PASS" endtime="20150618 21:55:38.431" starttime="20150618 21:55:38.431"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>@{my_list_variable}[1]</arg>
+</arguments>
+<msg timestamp="20150618 21:55:38.432" level="INFO">Item 2</msg>
+<status status="PASS" endtime="20150618 21:55:38.432" starttime="20150618 21:55:38.432"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>@{my_list_variable}[2]</arg>
+</arguments>
+<msg timestamp="20150618 21:55:38.433" level="INFO">Item 3</msg>
+<status status="PASS" endtime="20150618 21:55:38.433" starttime="20150618 21:55:38.432"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150618 21:55:38.433" critical="yes" starttime="20150618 21:55:38.430"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150618 21:55:38.434" starttime="20150618 21:55:38.423"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150618 21:55:38.435" starttime="20150618 21:55:38.389"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="2" id="s1" name="Tests">Tests</stat>
+<stat fail="0" pass="2" id="s1-s1" name="List">Tests.List</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

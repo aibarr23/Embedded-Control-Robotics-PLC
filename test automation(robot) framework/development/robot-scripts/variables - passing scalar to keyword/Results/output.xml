@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150517 19:46:27.856" generator="Robot 2.8.7 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\variables - passing scalar to keyword\tests" id="s1" name="Tests">
+<suite source="C:\development\robot-scripts\variables - passing scalar to keyword\tests\passing.robot" id="s1-s1" name="Passing">
+<test id="s1-s1-t1" name="User can search for products">
+<kw type="kw" name="Begin Web Test">
+<doc></doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>ie</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20150517 19:46:28.012" level="INFO">Opening browser 'ie' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150517 19:46:35.837" starttime="20150517 19:46:28.011"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150517 19:46:37.854" starttime="20150517 19:46:35.837"></status>
+</kw>
+<status status="PASS" endtime="20150517 19:46:37.854" starttime="20150517 19:46:28.011"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150517 19:46:37.855" critical="yes" starttime="20150517 19:46:28.010"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150517 19:46:37.858" starttime="20150517 19:46:27.895"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150517 19:46:37.861" starttime="20150517 19:46:27.856"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Tests">Tests</stat>
+<stat fail="0" pass="1" id="s1-s1" name="Passing">Tests.Passing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

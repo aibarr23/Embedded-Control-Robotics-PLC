@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150710 22:03:34.700" generator="Robot 2.8.7 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\intro\tests\operating_system.robot" id="s1" name="Operating System">
+<test id="s1-t1" name="Create Some Directories">
+<kw type="kw" name="OS.Create the Base Directory">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="OperatingSystem.Create Directory">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.768" html="yes" level="INFO">Created directory '&lt;a href="file://C:\development\robot-scripts\intro\Outputs"&gt;C:\development\robot-scripts\intro\Outputs&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.769" starttime="20150710 22:03:34.768"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.769" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs"&gt;C:\development\robot-scripts\intro\Outputs&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.769" starttime="20150710 22:03:34.769"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.769" starttime="20150710 22:03:34.767"></status>
+</kw>
+<kw type="kw" name="OS.Create Directory 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${directory_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.771" level="INFO">${directory_path} = Outputs\first directory</msg>
+<status status="PASS" endtime="20150710 22:03:34.771" starttime="20150710 22:03:34.770"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Create Directory">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.772" html="yes" level="INFO">Created directory '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory"&gt;C:\development\robot-scripts\intro\Outputs\first directory&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.772" starttime="20150710 22:03:34.771"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.772" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory"&gt;C:\development\robot-scripts\intro\Outputs\first directory&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.773" starttime="20150710 22:03:34.772"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.773" starttime="20150710 22:03:34.770"></status>
+</kw>
+<kw type="kw" name="OS.Create Directory 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${directory_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.774" level="INFO">${directory_path} = Outputs\second directory</msg>
+<status status="PASS" endtime="20150710 22:03:34.774" starttime="20150710 22:03:34.774"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Create Directory">
+<doc>Creates the specified directory.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.775" html="yes" level="INFO">Created directory '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory"&gt;C:\development\robot-scripts\intro\Outputs\second directory&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.775" starttime="20150710 22:03:34.774"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${directory_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.776" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory"&gt;C:\development\robot-scripts\intro\Outputs\second directory&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.776" starttime="20150710 22:03:34.775"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.776" starttime="20150710 22:03:34.773"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" endtime="20150710 22:03:34.777" critical="yes" starttime="20150710 22:03:34.766"></status>
+</test>
+<test id="s1-t2" name="Create Some Files">
+<kw type="kw" name="OS.Create the First File">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${file_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_1}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.782" level="INFO">${file_path} = Outputs\first directory\first file.txt</msg>
+<status status="PASS" endtime="20150710 22:03:34.782" starttime="20150710 22:03:34.781"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Create File">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>This is some text in file one!</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.783" html="yes" level="INFO">Created file '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory\first file.txt"&gt;C:\development\robot-scripts\intro\Outputs\first directory\first file.txt&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.783" starttime="20150710 22:03:34.782"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.784" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory\first file.txt"&gt;C:\development\robot-scripts\intro\Outputs\first directory\first file.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.784" starttime="20150710 22:03:34.784"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.784" starttime="20150710 22:03:34.781"></status>
+</kw>
+<kw type="kw" name="OS.Create the Second File">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${file_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_2}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.786" level="INFO">${file_path} = Outputs\second directory\second file.txt</msg>
+<status status="PASS" endtime="20150710 22:03:34.786" starttime="20150710 22:03:34.785"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Create File">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>This is some text in file two!</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.787" html="yes" level="INFO">Created file '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\second file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\second file.txt&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.787" starttime="20150710 22:03:34.786"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.787" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\second file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\second file.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.787" starttime="20150710 22:03:34.787"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.788" starttime="20150710 22:03:34.785"></status>
+</kw>
+<kw type="kw" name="OS.Create the Third File">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${file_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_3}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.789" level="INFO">${file_path} = Outputs\second directory\third file.txt</msg>
+<status status="PASS" endtime="20150710 22:03:34.789" starttime="20150710 22:03:34.788"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Create File">
+<doc>Creates a file with the given content and encoding.</doc>
+<arguments>
+<arg>${file_path}</arg>
+<arg>This is some text in file three!</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.790" html="yes" level="INFO">Created file '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\third file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\third file.txt&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.790" starttime="20150710 22:03:34.789"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${file_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.790" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\third file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\third file.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.791" starttime="20150710 22:03:34.790"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.791" starttime="20150710 22:03:34.788"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" endtime="20150710 22:03:34.791" critical="yes" starttime="20150710 22:03:34.778"></status>
+</test>
+<test id="s1-t3" name="Move a File">
+<kw type="kw" name="OS.Move File 3 from Directory 2 to Directory 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${source_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_3}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.794" level="INFO">${source_path} = Outputs\second directory\third file.txt</msg>
+<status status="PASS" endtime="20150710 22:03:34.794" starttime="20150710 22:03:34.793"></status>
+</kw>
+<kw type="kw" name="${target_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_3}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.795" level="INFO">${target_path} = Outputs\first directory\third file.txt</msg>
+<status status="PASS" endtime="20150710 22:03:34.795" starttime="20150710 22:03:34.794"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Move File">
+<doc>Moves the source file into the destination.</doc>
+<arguments>
+<arg>${source_path}</arg>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.796" html="yes" level="INFO">Moved file from '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\third file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\third file.txt&lt;/a&gt;' to '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory\third file.txt"&gt;C:\development\robot-scripts\intro\Outputs\first directory\third file.txt&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.796" starttime="20150710 22:03:34.795"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.796" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory\third file.txt"&gt;C:\development\robot-scripts\intro\Outputs\first directory\third file.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.797" starttime="20150710 22:03:34.796"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Not Exist">
+<doc>Fails if the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${source_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.797" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\third file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\third file.txt&lt;/a&gt;' does not exist</msg>
+<status status="PASS" endtime="20150710 22:03:34.797" starttime="20150710 22:03:34.797"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.797" starttime="20150710 22:03:34.793"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" endtime="20150710 22:03:34.798" critical="yes" starttime="20150710 22:03:34.792"></status>
+</test>
+<test id="s1-t4" name="Copy a File">
+<kw type="kw" name="OS.Copy File 1 from Directory 1 to Directory 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${source_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_1}</arg>
+<arg>${file_1}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.800" level="INFO">${source_path} = Outputs\first directory\first file.txt</msg>
+<status status="PASS" endtime="20150710 22:03:34.800" starttime="20150710 22:03:34.800"></status>
+</kw>
+<kw type="kw" name="${target_path} = OperatingSystem.Join Path">
+<doc>Joins the given path part(s) to the given base path.</doc>
+<arguments>
+<arg>${output_directory}</arg>
+<arg>${directory_2}</arg>
+<arg>${file_1}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.801" level="INFO">${target_path} = Outputs\second directory\first file.txt</msg>
+<status status="PASS" endtime="20150710 22:03:34.801" starttime="20150710 22:03:34.801"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Copy File">
+<doc>Copies the source file into the destination.</doc>
+<arguments>
+<arg>${source_path}</arg>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.806" html="yes" level="INFO">Copied file from '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory\first file.txt"&gt;C:\development\robot-scripts\intro\Outputs\first directory\first file.txt&lt;/a&gt;' to '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\first file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\first file.txt&lt;/a&gt;'</msg>
+<status status="PASS" endtime="20150710 22:03:34.807" starttime="20150710 22:03:34.801"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${source_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.808" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\first directory\first file.txt"&gt;C:\development\robot-scripts\intro\Outputs\first directory\first file.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.808" starttime="20150710 22:03:34.807"></status>
+</kw>
+<kw type="kw" name="OperatingSystem.Should Exist">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>${target_path}</arg>
+</arguments>
+<msg timestamp="20150710 22:03:34.809" html="yes" level="INFO">Path '&lt;a href="file://C:\development\robot-scripts\intro\Outputs\second directory\first file.txt"&gt;C:\development\robot-scripts\intro\Outputs\second directory\first file.txt&lt;/a&gt;' exists</msg>
+<status status="PASS" endtime="20150710 22:03:34.809" starttime="20150710 22:03:34.808"></status>
+</kw>
+<status status="PASS" endtime="20150710 22:03:34.809" starttime="20150710 22:03:34.799"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>OperatingSystem</tag>
+</tags>
+<status status="PASS" endtime="20150710 22:03:34.810" critical="yes" starttime="20150710 22:03:34.799"></status>
+</test>
+<doc>These are some file &amp; directory tests</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150710 22:03:34.811" starttime="20150710 22:03:34.701"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="4" fail="0">OperatingSystem</stat>
+</tag>
+<suite>
+<stat fail="0" pass="4" id="s1" name="Operating System">Operating System</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

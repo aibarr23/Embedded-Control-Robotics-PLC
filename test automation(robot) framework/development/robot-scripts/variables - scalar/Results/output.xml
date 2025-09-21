@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150517 18:30:31.261" generator="Robot 2.8.7 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\variables - scalar\tests" id="s1" name="Tests">
+<suite source="C:\development\robot-scripts\variables - scalar\tests\Scalar.robot" id="s1-s1" name="Scalar">
+<test id="s1-s1-t1" name="Set a variable in the test case">
+<kw type="kw" name="${my_new_variable} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Something else</arg>
+</arguments>
+<msg timestamp="20150517 18:30:31.303" level="INFO">${my_new_variable} = Something else</msg>
+<status status="PASS" endtime="20150517 18:30:31.303" starttime="20150517 18:30:31.302"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${my_new_variable}</arg>
+</arguments>
+<msg timestamp="20150517 18:30:31.303" level="INFO">Something else</msg>
+<status status="PASS" endtime="20150517 18:30:31.304" starttime="20150517 18:30:31.303"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Current</tag>
+</tags>
+<status status="PASS" endtime="20150517 18:30:31.304" critical="yes" starttime="20150517 18:30:31.302"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150517 18:30:31.305" starttime="20150517 18:30:31.299"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150517 18:30:31.307" starttime="20150517 18:30:31.261"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">Current</stat>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Tests">Tests</stat>
+<stat fail="0" pass="1" id="s1-s1" name="Scalar">Tests.Scalar</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
