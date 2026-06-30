@@ -14382,3 +14382,5 @@ RTOS/Mini_RTOS/tm4c123-keil/tmp/lesson+dbg/src/lesson+dbg-stamp/lesson+dbg-updat
 RTOS/Mini_RTOS/tm4c123-keil/tmp/lesson+dbg/src/lesson+dbg-stamp/lesson+dbg-update-info.txt
 RTOS/Mini_RTOS/tm4c123-keil/tmp/lesson+dbg/tmp/lesson+dbg-cfgcmd.txt
 RTOS/Mini_RTOS/tm4c123-keil/tmp/lesson+dbg/tmp/lesson+dbg-mkdirs.cmake
+Session.vim
+.venv/
