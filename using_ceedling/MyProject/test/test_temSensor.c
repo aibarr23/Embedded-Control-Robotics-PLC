@@ -13,6 +13,16 @@ void setUp(void)
 void tearDown(void)
 {
 }
+void test_whenTempRegisterReadsMinValue_thenTheTempIsTheMinValue(void){
+    uint8_t tempRegisterAddress = 0x03;
+    float expectedTemperature = -100.0f;
+    float tolerance = 0.1f;
+
+    i2c_readRegister_ExpectAndReturn(tempRegisterAddress, 0x0);
+    
+    float actualTemperature = tempSensor_getTemperature();
+    TEST_ASSERT_FLOAT_WITHIN(tolerance, expectedTemperature, actualTemperature);
+}
 
 void test_whenTempRegisterReadsMaxValue_thenTheTempIsTheMaxValue(void){
     uint8_t tempRegisterAddress = 0x03;
