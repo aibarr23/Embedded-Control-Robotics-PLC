@@ -29,7 +29,7 @@ with open(sys.argv[1], "rb") as f:
     fw_image = bytearray(f.read())
     f.close()
 
-version_hex = sys.arbv[2]
+version_hex = sys.argv[2]
 version_value = int(version_hex, base=16)
 struct.pack_into("<I", fw_image, FWINFO_OFFSET + FWINFO_LENGTH_OFFSET, len(fw_image))
 struct.pack_into("<I", fw_image, FWINFO_OFFSET + FWINFO_VERSION_OFFSET, version_value)
